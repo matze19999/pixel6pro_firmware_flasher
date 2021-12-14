@@ -105,7 +105,7 @@ while True:
 
 while counter > 0:
     versiontext = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, f'/html/body/section/section/main/devsite-content/article/div[3]/div[2]/table/tbody/tr[{counter}]/td[1]'))).text.replace(' ', '')
-    if 'Verizon' in versiontext or 'AT&T' in versiontext or 'Google Fi' in versiontext:
+    if 'Verizon' in versiontext or 'AT&T' in versiontext or 'Google Fi' in versiontext or 'carrier' in versiontext:
         counter -= 1
         continue
     else:
